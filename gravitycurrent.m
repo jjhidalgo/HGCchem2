@@ -35,7 +35,7 @@ tstart = tic;
 %
 [Ax,Bx,Axx,Bxx] = CD_matrices(grid.Nx,grid.Lx/(grid.Nx-1),false());
 %
-[Az,Bz,Azz,Bzz] = CD_matrices(grid.Nz,grid.Lz/(grid.Nz-1),par.isPeriodic);
+[Az,Bz,Azz,Bzz] = CD_matrices(grid.Nz,grid.Lz/(grid.Nz-1),par.IsPeriodic);
 %
 % Auxiliar strings
 %

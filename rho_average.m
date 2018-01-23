@@ -6,7 +6,7 @@ function [rhoavg_z,rhoavg_x] = rho_average(grid,par,conc)
   
   rhoavg_x = ([xNz r] + [r xNz])/2;
   
-  if par.isPeriodic
+  if par.IsPeriodic
     rhoavg_z = ([r(1,:); r] + [r; r(grid.Nz,:)])/2;
   else
     zNx = zeros(1,grid.Nx);

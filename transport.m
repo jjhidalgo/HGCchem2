@@ -51,7 +51,7 @@ function c = transport(par,por,t,c,ux,uz,Az,Azz,Bz,Bzz,Ax,Axx,Bx,Bxx);
 %
 % Top and bottom boundaries
 %  
-    if ~par.isPeriodic
+    if ~par.IsPeriodic
       c(1,:) = c(2,:);
       c(end,:) = c(end-1,:);
     end

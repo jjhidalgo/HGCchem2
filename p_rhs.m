@@ -124,11 +124,11 @@ end
                 -T.Ty(2:Nz,:).*rhoavg_z(2:Nz,:)*grid.cos;
 
 % periodic boundary conditions.
-  if par.isPeriodic
+  if par.IsPeriodic
    uy(1,:) =  -T.Typ.*([p(1,:)]-[p(Nz,:)])/dz ...
                 -T.Typ.*rhoavg_z(1,:)*grid.cos;
    uy(Nz+1,:) =  uy(1,:);  
-end
+  end
 %
 % Average velocity in the cell.
 %

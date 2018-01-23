@@ -1,4 +1,4 @@
-function [kperm, var_lnk_actual] =calc_perm(grid,K)
+function [kperm, var_lnk_actual] = calc_perm(grid,K)
 
   Lx = grid.Lx;
   Lz = grid.Lz;
@@ -10,5 +10,5 @@ function [kperm, var_lnk_actual] =calc_perm(grid,K)
   [KX,KZ] = meshgrid(kx,kz);
   KX2 = KX.^2;
   KZ2 = KZ.^2;
-  [kperm,var_lnk_actual] = gen_randperm(K,KX2,KZ2);
+  [kperm, var_lnk_actual] = gen_randperm(K,KX2,KZ2);
 end

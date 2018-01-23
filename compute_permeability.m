@@ -16,7 +16,7 @@ function kperm = compute_permeability(K,grid,par)
   
   elseif (K.isHet && ~K.load)
   
-    [kperm var_lnk_actual] = calc_perm(grid,K);
+    [kperm, var_lnk_actual] = calc_perm(grid,K);
     lk = log(kperm);
     lk = zscore(lk);
     kperm = exp(lk);

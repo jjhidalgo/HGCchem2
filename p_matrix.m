@@ -42,7 +42,7 @@ function [Am,T]= p_matrix(grid,par,K,conc)
   Ty11 = T.Ty1;
   Ty22 = T.Ty2;
 %
-  if par.isPeriodic
+  if par.IsPeriodic
       
     T.Typ = (2*dx)./(mu(Nz,:)+mu(1,:));
   
@@ -82,7 +82,7 @@ function [Am,T]= p_matrix(grid,par,K,conc)
                          T.TxDirichL/dx2;
   end
 %
-  if par.isPeriodic
+  if par.IsPeriodic
     Dp(1:Nz:Np,1) = Dp(1:Nz:Np,1) + T.Typ(:)/dz2;
     Dp(Nz:Nz:Np,1) = Dp(Nz:Nz:Np,1) + T.Typ(:)/dz2;
 %

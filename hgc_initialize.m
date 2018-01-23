@@ -33,7 +33,7 @@ t.dt_custom = 1e99;
 %
 % Physical parameters
 %
-par.isPeriodic = false();
+par.IsPeriodic = false();
 par.LeftIsDirichletFlow = false();
 par.RightIsDirichletFlow = true();
 par.LeftIsDirichletTpt = true();

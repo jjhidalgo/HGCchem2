@@ -42,7 +42,7 @@ par.noise = 0.0; %amplitud of noise in the to intial solution (0.01).
 %
 % Boundary condtions
 %
-par.isPeriodic = true(); %top and bottom
+par.IsPeriodic = true(); %top and bottom
 par.LeftIsDirichletFlow = false();
 par.RightIsDirichletFlow = false();
 par.LeftIsDirichletTpt = true();
@@ -70,7 +70,13 @@ restart.file = '';
 %
 % Permeability
 K.isHet = false();
-K.kperm = ones(grid.Nz,grid.Nx);
+K.load = false();
+%K.var_lnk = 1.;
+%K.corr_lenx = grid.dx;
+%K.corr_lenz = grid.dx;
+%K.kperm = compute_permeability(K,grid,par);
+%K.kperm = ones(grid.Nz,grid.Nx);
+
 %
 % Initial condicitons
 %
