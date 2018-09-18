@@ -38,7 +38,9 @@ function saved = save_data(saveopt,grid,par,por_in,K,t,c,p,ux,uz,restart)
     view(2);
     shading('interp');
     axis('equal','off');
-    caxis([0 1]);
+    %caxis([0 1]);
+    caxis(minmax(c))
+    colorbar()
     title(strtitle);
     drawnow
   end

@@ -63,13 +63,13 @@ end
 % Boundary conditions
 %
   if par.LeftIsDirichletFlow
-    S(1:Nz,1) = S(1:Nz,1) + 2.*T.TxDirichL.*(par.pL/dx/dx);
+    S(1:Nz,1) = S(1:Nz,1) + T.TxDirichL.*(par.pL/dx/dx);
   else
     S(1:Nz,1) = S(1:Nz,1) + par.uL/dx;
   end
   
   if par.RightIsDirichletFlow
-      S(Np-Nz+1:Np,1) = S(Np-Nz+1:Np,1) + 2.*T.TxDirichR.*(par.pR/dx/dx);
+      S(Np-Nz+1:Np,1) = S(Np-Nz+1:Np,1) + T.TxDirichR.*(par.pR/dx/dx);
   else
       S(Np-Nz+1:Np,1) = S(Np-Nz+1:Np,1) + par.uR/dx;
   end
