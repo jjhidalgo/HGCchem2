@@ -25,7 +25,8 @@ end
 %
 t.Tmax = 100.0; % maximum time
 t.Tpar = 0.1;  % output interval
-t.dt_custom = 1e99; % This time step is used if lower than the the authomatic.
+%t.dt_custom = 1e99; % This time step is used if lower than the the authomatic.
+%t.dt_min = 1e-10; %If dt < t.dt_min simulations is stopped.
 %
 % Physical parameters
 %

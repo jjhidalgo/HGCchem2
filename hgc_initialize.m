@@ -30,6 +30,7 @@ t.ipost = 0;
 t.npost = 1;  %do postprocess every Tpar/npost.
 t.timesc = 0;
 t.dt_custom = 1e99;
+t.dt_min = 1e-10;
 %
 % Physical parameters
 %
