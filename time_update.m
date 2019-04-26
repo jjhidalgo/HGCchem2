@@ -26,7 +26,7 @@ function [t, saveopt] = time_update(t,grid,par,por,saveopt,umax)
     % we could save the state here to restart unfinished simulations
   end
 
-  if (t.dt<1e-10 && ~saveopt.now) %dt can be small because 
+  if (t.dt<t.dt_min && ~saveopt.now) %dt can be small because 
                                   %we want to save the data 
                                   %at an exact time.
     disp('Time step very small!');
